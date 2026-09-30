@@ -172,3 +172,18 @@ Et une question qui revient toujours :
 **Play the game.**
 
 ---
+```mermaid
+mindmap
+  root((Mon projet))
+    Backend
+      API
+      Base de données
+      Authentification
+    Frontend
+      UI
+      Composants
+      Tests
+    DevOps
+      CI/CD
+      Docker
+      Déploiement
