@@ -171,19 +171,48 @@ Et une question qui revient toujours :
 **Accept the rules.**
 **Play the game.**
 
----
-```mermaid
-mindmap
-  root((Mon projet))
-    Backend
-      API
-      Base de données
-      Authentification
-    Frontend
-      UI
-      Composants
-      Tests
-    DevOps
-      CI/CD
-      Docker
-      Déploiement
+---@startuml
+title Delemarchan Box — Structure GitHub
+
+skinparam folder {
+    BackgroundColor #1e1e1e
+    BorderColor #666666
+    FontColor white
+}
+
+skinparam file {
+    BackgroundColor #252525
+    BorderColor #888888
+    FontColor white
+}
+
+skinparam rectangle {
+    BackgroundColor #181818
+    BorderColor #444444
+    FontColor white
+}
+
+rectangle "🐙 GitHub Organization\nDelemarchan Box" {
+
+    folder ".github" {
+
+        folder "profile" {
+
+            file "README.md\n\n📦 Présentation officielle\n\n🇫🇷 × 🇧🇫\n\n🩸 Philosophie\n🎮 Projets\n🌍 Studio"
+        }
+    }
+
+    folder "Administrator" {
+        file "README.md\n\n🗄️ Présentation du jeu"
+    }
+
+    folder "UFG" {
+        file "README.md\n\n🔥 Ultimate Fakir Game"
+    }
+}
+
+rectangle "🌐 Page de l'organisation" as PAGE
+
+".github/profile/README.md" --> PAGE : affiché automatiquement
+
+@enduml
